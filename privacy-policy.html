@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — GuíaExpress CR</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #2d3748;
+      background: #f7fafc;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .logo-icon {
+      background: #3aaa35;
+      color: white;
+      font-weight: 900;
+      font-size: 16px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    .logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a365d;
+    }
+    .logo-text span { color: #3aaa35; }
+    h1 {
+      font-size: 28px;
+      color: #1a365d;
+      margin-bottom: 8px;
+    }
+    .date {
+      color: #718096;
+      font-size: 14px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #1a365d;
+      margin: 32px 0 12px;
+    }
+    p, li {
+      margin-bottom: 12px;
+      color: #4a5568;
+    }
+    ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    strong { color: #2d3748; }
+    a { color: #3aaa35; }
+    .highlight {
+      background: #e8f5e9;
+      border-left: 3px solid #3aaa35;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid #e2e8f0;
+      color: #a0aec0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">GX</div>
+        <div class="logo-text">Guía<span>Express</span> CR</div>
+      </div>
+      <h1>Política de Privacidad</h1>
+      <p class="date">Última actualización: Marzo 2026</p>
+    </header>
+
+    <h2>1. Introducción</h2>
+    <p>GuíaExpress CR ("la Extensión") es una herramienta que facilita la creación de guías de envío para Correos de Costa Rica. Esta política describe qué datos recopilamos, cómo los usamos y cómo los protegemos.</p>
+
+    <h2>2. Datos que recopilamos</h2>
+    <p>Cuando usás GuíaExpress CR, recopilamos los siguientes datos:</p>
+    <ul>
+      <li><strong>Correo electrónico:</strong> para crear y gestionar tu cuenta.</li>
+      <li><strong>Nombre (opcional):</strong> para personalizar tu experiencia.</li>
+      <li><strong>Uso de guías:</strong> conteo diario de guías creadas, para aplicar los límites del plan.</li>
+      <li><strong>Información de suscripción:</strong> plan activo y estado de pago (gestionado por Tilopay).</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>Importante:</strong> No recopilamos ni almacenamos tus credenciales de Correos de Costa Rica. La extensión usa tu sesión existente del navegador para interactuar con el sistema de Correos.
+    </div>
+
+    <h2>3. Datos que NO recopilamos</h2>
+    <ul>
+      <li>Credenciales de acceso a Correos de Costa Rica.</li>
+      <li>Datos de los destinatarios de tus envíos (nombres, direcciones, teléfonos). Estos se procesan localmente en tu navegador y se envían directamente a Correos.</li>
+      <li>Contenido de las guías de envío.</li>
+      <li>Historial de navegación o actividad fuera de la extensión.</li>
+      <li>Información de tarjetas de crédito (manejada exclusivamente por Tilopay).</li>
+    </ul>
+
+    <h2>4. Cómo usamos los datos</h2>
+    <ul>
+      <li><strong>Autenticación:</strong> para identificar tu cuenta y mantener la sesión activa.</li>
+      <li><strong>Control de uso:</strong> para aplicar los límites de guías según tu plan.</li>
+      <li><strong>Facturación:</strong> para gestionar tu suscripción a través de Tilopay.</li>
+    </ul>
+
+    <h2>5. Dónde almacenamos los datos</h2>
+    <ul>
+      <li><strong>Supabase (PostgreSQL):</strong> cuenta de usuario, perfil, conteo de uso y datos de suscripción. Los servidores están alojados en infraestructura segura con cifrado en tránsito y en reposo.</li>
+      <li><strong>Tilopay:</strong> datos de pago y facturación. Tilopay es un procesador de pagos certificado PCI DSS con soporte 3D Secure.</li>
+      <li><strong>chrome.storage.local:</strong> token de sesión almacenado localmente en tu navegador.</li>
+    </ul>
+
+    <h2>6. Procesamiento de datos de envío</h2>
+    <p>Los datos de los destinatarios (nombre, teléfono, dirección, etc.) que ingresás en la extensión:</p>
+    <ul>
+      <li>Se procesan <strong>localmente en tu navegador</strong>.</li>
+      <li>Se envían <strong>directamente al sistema de Correos de Costa Rica</strong> usando tu sesión activa.</li>
+      <li><strong>No pasan por nuestros servidores</strong> ni se almacenan fuera de tu navegador.</li>
+    </ul>
+
+    <h2>7. Compartición de datos</h2>
+    <p>No vendemos, alquilamos ni compartimos tus datos personales con terceros, excepto:</p>
+    <ul>
+      <li><strong>Tilopay:</strong> para procesar pagos de suscripción.</li>
+      <li><strong>Requerimientos legales:</strong> si la ley lo exige.</li>
+    </ul>
+
+    <h2>8. Seguridad</h2>
+    <ul>
+      <li>Comunicaciones cifradas con HTTPS/TLS.</li>
+      <li>Autenticación con tokens JWT con expiración y renovación automática.</li>
+      <li>Row Level Security (RLS) en la base de datos: cada usuario solo puede acceder a sus propios datos.</li>
+      <li>Claves de API con privilegios mínimos.</li>
+    </ul>
+
+    <h2>9. Retención de datos</h2>
+    <ul>
+      <li><strong>Datos de cuenta:</strong> se mantienen mientras la cuenta esté activa.</li>
+      <li><strong>Datos de uso:</strong> conteos diarios, mantenidos por 90 días.</li>
+      <li><strong>Al eliminar la cuenta:</strong> todos los datos asociados se eliminan de forma permanente.</li>
+    </ul>
+
+    <h2>10. Tus derechos</h2>
+    <p>Tenés derecho a:</p>
+    <ul>
+      <li><strong>Acceder</strong> a tus datos personales almacenados.</li>
+      <li><strong>Corregir</strong> información incorrecta.</li>
+      <li><strong>Eliminar</strong> tu cuenta y todos los datos asociados.</li>
+      <li><strong>Exportar</strong> tus datos en formato estándar.</li>
+    </ul>
+    <p>Para ejercer estos derechos, contactanos a: <a href="mailto:guiaexpresscr@gmail.com">guiaexpresscr@gmail.com</a></p>
+
+    <h2>11. Permisos de la extensión</h2>
+    <p>La extensión solicita los siguientes permisos de Chrome:</p>
+    <ul>
+      <li><strong>activeTab:</strong> para interactuar con la pestaña activa de Correos de Costa Rica.</li>
+      <li><strong>storage:</strong> para guardar la sesión y preferencias localmente.</li>
+      <li><strong>sidePanel:</strong> para mostrar el panel lateral de la extensión.</li>
+      <li><strong>tabs:</strong> para abrir pestañas de Correos y páginas de pago.</li>
+      <li><strong>scripting:</strong> para interactuar con el formulario de Correos de Costa Rica.</li>
+      <li><strong>alarms:</strong> para renovar el token de sesión periódicamente.</li>
+      <li><strong>Host sucursal.correos.go.cr:</strong> para crear guías en el sistema de Correos.</li>
+      <li><strong>Host supabase.co:</strong> para autenticación y gestión de cuenta.</li>
+    </ul>
+
+    <h2>12. Cambios a esta política</h2>
+    <p>Podemos actualizar esta política periódicamente. Te notificaremos de cambios significativos a través de la extensión o por correo electrónico.</p>
+
+    <h2>13. Contacto</h2>
+    <p>Si tenés preguntas sobre esta política de privacidad, contactanos a:</p>
+    <p><a href="mailto:guiaexpresscr@gmail.com">guiaexpresscr@gmail.com</a></p>
+
+    <footer>
+      &copy; 2026 GuíaExpress CR. Todos los derechos reservados.
+    </footer>
+  </div>
+</body>
+</html>
