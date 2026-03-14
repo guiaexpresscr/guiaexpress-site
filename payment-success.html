@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pago exitoso &mdash; Gu&iacute;aExpress CR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,-apple-system,sans-serif;background:#f4f7fb;color:#1a2e3b;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .header{background:#003057;width:100%;padding:16px 24px;display:flex;align-items:center;gap:10px;position:fixed;top:0;left:0}
+    .logo-box{background:#3aaa35;color:#fff;font-weight:900;font-size:14px;padding:4px 10px;border-radius:6px}
+    .logo-text{color:#fff;font-size:16px;font-weight:700}
+    .logo-text span{color:#3aaa35}
+    .card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,48,87,.08);padding:48px 40px;text-align:center;max-width:440px;width:90%;margin-top:80px}
+    .icon{margin-bottom:20px}
+    h1{font-size:24px;font-weight:800;color:#003057;margin-bottom:8px}
+    .badge{display:inline-block;padding:6px 16px;border-radius:50px;font-size:14px;font-weight:700;margin-bottom:20px;background:#e8f8e7;color:#3aaa35}
+    .body-text{color:#6b7d8a;font-size:15px;line-height:1.7;margin-bottom:24px}
+    .close-hint{color:#a0aec0;font-size:13px;margin-top:8px}
+    .footer-note{color:#a0aec0;font-size:12px;margin-top:32px}
+    .footer-note a{color:#3aaa35;text-decoration:none}
+  </style>
+  <script>
+    // Leer el plan del query string si viene
+    const params = new URLSearchParams(window.location.search);
+    const plan = params.get('plan');
+    document.addEventListener('DOMContentLoaded', () => {
+      if (plan) {
+        const label = plan.charAt(0).toUpperCase() + plan.slice(1);
+        document.getElementById('badge').textContent = 'Plan ' + label + ' activado';
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-box">GX</div>
+    <div class="logo-text">Gu&iacute;a<span>Express</span> CR</div>
+  </div>
+  <div class="card">
+    <div class="icon">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="30" stroke="#3aaa35" stroke-width="3"/>
+        <path d="M20 33l8 8 16-18" stroke="#3aaa35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h1>Pago exitoso</h1>
+    <div class="badge" id="badge">Plan activado</div>
+    <p class="body-text">Tu plan ha sido actualizado. Volv&eacute; a la extensi&oacute;n de Gu&iacute;aExpress para disfrutar de tus nuevos beneficios.</p>
+    <p class="close-hint">Pod&eacute;s cerrar esta pesta&ntilde;a.<br>La extensi&oacute;n se actualizar&aacute; autom&aacute;ticamente.</p>
+  </div>
+  <p class="footer-note">&copy; 2026 Gu&iacute;aExpress CR &mdash; <a href="privacy-policy.html" target="_blank">Pol&iacute;tica de privacidad</a></p>
+</body>
+</html>
