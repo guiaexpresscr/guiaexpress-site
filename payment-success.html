@@ -9,7 +9,8 @@
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:Inter,-apple-system,sans-serif;background:#f4f7fb;color:#1a2e3b;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
     .header{background:#003057;width:100%;padding:16px 24px;display:flex;align-items:center;gap:10px;position:fixed;top:0;left:0}
-    .logo-box{background:#3aaa35;color:#fff;font-weight:900;font-size:14px;padding:4px 10px;border-radius:6px}
+    .logo-box{width:32px;height:32px}
+    .logo-box img{width:100%;height:100%;object-fit:contain}
     .logo-text{color:#fff;font-size:16px;font-weight:700}
     .logo-text span{color:#3aaa35}
     .card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,48,87,.08);padding:48px 40px;text-align:center;max-width:440px;width:90%;margin-top:80px}
@@ -35,7 +36,7 @@
 </head>
 <body>
   <div class="header">
-    <div class="logo-box">GX</div>
+    <div class="logo-box"><img src="assets/logo-white.png" alt="GX"></div>
     <div class="logo-text">Gu&iacute;a<span>Express</span> CR</div>
   </div>
   <div class="card">

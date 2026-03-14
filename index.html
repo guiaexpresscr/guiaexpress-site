@@ -57,13 +57,17 @@
     }
 
     .logo-box {
-      background: var(--green);
-      color: #fff;
-      font-weight: 900;
-      font-size: .95rem;
-      padding: .3rem .65rem;
+      width: 32px;
+      height: 32px;
       border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(58,170,53,.35);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .logo-text {
@@ -426,16 +430,16 @@
     }
 
     .panel-logo {
-      background: var(--green);
-      color: white;
-      font-weight: 900;
-      font-size: 11px;
       width: 28px;
       height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .panel-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .panel-brand-title { font-size: 14px; font-weight: 800; }
@@ -705,7 +709,7 @@
 <!-- ── NAVBAR ── -->
 <nav class="navbar">
   <a href="#" class="navbar-brand">
-    <div class="logo-box">GX</div>
+    <div class="logo-box"><img src="assets/logo-white.png" alt="GX"></div>
     <div class="logo-text">Guia<span>Express</span> CR</div>
   </a>
   <div class="nav-links">
@@ -925,7 +929,7 @@
     <p class="section-sub" style="color:rgba(255,255,255,.7);margin:0 auto 1rem">El panel lateral muestra el progreso en tiempo real y los resultados al finalizar.</p>
     <div class="demo-panel">
       <div class="panel-header">
-        <div class="panel-logo">GX</div>
+        <div class="panel-logo"><img src="assets/logo-green.png" alt="GX"></div>
         <div>
           <div class="panel-brand-title">Guía<span>Express</span> CR</div>
           <div class="panel-brand-sub">Correos de Costa Rica</div>
@@ -1073,7 +1077,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div style="display:flex;align-items:center;gap:.5rem">
-        <div class="logo-box" style="font-size:.8rem;padding:.2rem .5rem">GX</div>
+        <div class="logo-box" style="width:24px;height:24px"><img src="assets/logo-white.png" alt="GX"></div>
         <span style="color:#fff;font-weight:700;font-size:.95rem">GuíaExpress CR</span>
       </div>
       <p>Extensión de Chrome para automatizar la creación de guías en el sistema de Correos de Costa Rica.</p>
