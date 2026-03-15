@@ -75,14 +75,35 @@
 
     .logo-text span { color: var(--green); }
 
-    .nav-back {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
       color: rgba(255,255,255,.7);
       text-decoration: none;
-      font-size: .9rem;
+      font-size: .85rem;
+      font-weight: 500;
       transition: color .2s;
     }
 
-    .nav-back:hover { color: #fff; }
+    .nav-links a:hover { color: #fff; }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--teal), var(--green-bright)) !important;
+      color: #fff !important;
+      padding: .4rem 1.1rem !important;
+      border-radius: 6px !important;
+      transition: opacity .2s !important;
+    }
+
+    .nav-cta:hover { opacity: 0.9 !important; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
 
     .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
@@ -229,7 +250,13 @@
     <div class="logo-box"><img src="assets/logo-white.png" alt="GX"></div>
     <div class="logo-text">Guia<span>Express</span> CR</div>
   </a>
-  <a href="index.html" class="nav-back">&larr; Volver al inicio</a>
+  <div class="nav-links">
+    <a href="index.html#como-funciona">Como funciona</a>
+    <a href="funcionalidades.html">Funcionalidades</a>
+    <a href="index.html#planes">Planes</a>
+    <a href="faq.html">FAQ</a>
+    <a href="https://chromewebstore.google.com/detail/guíaexpress-cr/odolafngfpjodndmlbamhmfabbgakpbg" target="_blank" class="nav-cta">Instalar extensión</a>
+  </div>
 </nav>
 
 <section class="hero">
