@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Preguntas frecuentes — GuíaExpress CR</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f2b3c;
+      --navy-mid: #153a4f;
+      --green: #4db284;
+      --green-dark: #39a399;
+      --green-light: #e6f7f2;
+      --teal: #309da2;
+      --green-bright: #6fca60;
+      --white: #ffffff;
+      --bg: #f4f7fb;
+      --text: #1a2e3b;
+      --muted: #6b7d8a;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 15px rgba(0,48,87,.08);
+    }
+
+    body {
+      font-family: Inter, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: var(--navy);
+      padding: .75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      text-decoration: none;
+    }
+
+    .logo-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .logo-box img { width: 100%; height: 100%; object-fit: contain; }
+
+    .logo-text { color: #fff; font-size: 1.05rem; font-weight: 700; }
+    .logo-text span { color: var(--green); }
+
+    .nav-back {
+      color: rgba(255,255,255,.7);
+      text-decoration: none;
+      font-size: .9rem;
+      transition: color .2s;
+    }
+
+    .nav-back:hover { color: #fff; }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .hero {
+      background: var(--white);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: .5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: .75rem;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .faq-q {
+      padding: 1rem 1.15rem;
+      background: var(--white);
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-q i { color: var(--green); font-size: .75rem; }
+
+    .faq-a {
+      padding: .85rem 1.15rem;
+      font-size: .85rem;
+      color: var(--muted);
+      line-height: 1.65;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-a a { color: var(--green); }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    footer a { color: var(--green); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <div class="logo-box"><img src="assets/logo-white.png" alt="GX"></div>
+    <div class="logo-text">Guia<span>Express</span> CR</div>
+  </a>
+  <a href="index.html" class="nav-back">&larr; Volver al inicio</a>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Preguntas frecuentes</h2>
+    <p class="section-sub">Lo que necesitás saber sobre GuíaExpress CR.</p>
+  </div>
+</section>
+
+<section style="padding: 0 2rem">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Es una extensión de Chrome? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Sí. Se instala desde la Chrome Web Store. Funciona con un side panel que se abre junto a la página de Correos.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Mis datos están seguros? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">100%. Los datos de tus envíos se procesan localmente en tu navegador y van directo a Correos. Solo almacenamos tu cuenta (email) y conteo de uso. Más detalles en nuestra <a href="privacy-policy.html">política de privacidad</a>.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Qué formatos de entrada acepta? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Texto libre pegado, archivos Excel (.xlsx/.xls) y CSV. Detecta columnas con encabezados automáticamente. Incluye plantilla descargable.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Qué pasa si una guía falla? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Las demás se siguen creando normalmente. Al final, el reporte muestra cuáles se crearon y cuáles fallaron, con el error específico.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Funciona con envíos a sucursal? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Sí. Si el cliente retira en sucursal, se busca la correcta por cantón entre las 99 sucursales mapeadas y se selecciona automáticamente.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Cómo descargo los PDFs? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Un solo clic en "Descargar PDF" combina todas las guías del lote en un único archivo PDF. También podés descargar cada guía individualmente.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 GuíaExpress CR &mdash; <a href="privacy-policy.html">Política de privacidad</a>
+</footer>
+
+</body>
+</html>
