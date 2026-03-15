@@ -12,12 +12,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #003057;
-      --navy-mid: #00457a;
-      --navy-light: #005a9e;
-      --green: #3aaa35;
-      --green-dark: #2d8a29;
-      --green-light: #e8f8e7;
+      --navy: #0f2b3c;
+      --navy-mid: #153a4f;
+      --navy-light: #1a4a63;
+      --green: #4db284;
+      --green-dark: #39a399;
+      --green-light: #e6f7f2;
+      --teal: #309da2;
+      --green-bright: #6fca60;
       --accent: #f5a623;
       --white: #ffffff;
       --bg: #f4f7fb;
@@ -97,14 +99,14 @@
     .nav-links a:hover { color: #fff; }
 
     .nav-cta {
-      background: var(--green) !important;
+      background: linear-gradient(135deg, var(--teal), var(--green-bright)) !important;
       color: #fff !important;
       padding: .4rem 1.1rem !important;
       border-radius: 6px !important;
-      transition: background .2s !important;
+      transition: opacity .2s !important;
     }
 
-    .nav-cta:hover { background: var(--green-dark) !important; }
+    .nav-cta:hover { opacity: 0.9 !important; }
 
     /* ── HERO ── */
     .hero {
@@ -167,7 +169,7 @@
     }
 
     .btn-primary {
-      background: var(--green);
+      background: linear-gradient(135deg, var(--teal) 0%, var(--green-bright) 100%);
       color: #fff;
       border: none;
       cursor: pointer;
@@ -179,11 +181,11 @@
       display: inline-flex;
       align-items: center;
       gap: .5rem;
-      transition: background .2s, transform .15s;
+      transition: opacity .2s, transform .15s;
     }
 
     .btn-primary:hover {
-      background: var(--green-dark);
+      opacity: 0.9;
       transform: translateY(-2px);
     }
 
@@ -422,7 +424,7 @@
     }
 
     .panel-header {
-      background: linear-gradient(135deg, #002240 0%, #003057 60%, #003d6b 100%);
+      background: linear-gradient(135deg, #0f2b3c 0%, #153a4f 60%, #1a4a63 100%);
       color: white;
       padding: 12px 14px;
       display: flex;
@@ -620,7 +622,7 @@
 
     /* ── CTA FINAL ── */
     .cta-final {
-      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+      background: linear-gradient(135deg, var(--teal) 0%, var(--green-bright) 100%);
       color: #fff;
       text-align: center;
       padding: 5rem 2rem;
